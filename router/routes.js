@@ -7,7 +7,7 @@ const cartRoute = require('./cart')
 const errorhandler = require('../Middleware/errorhandler')
 
 
-approuter.use("/", UserRoute, CatRoute, prodRoute, cartRoute)
+approuter.use("/", UserRoute)
 approuter.use("/", CatRoute)
 approuter.use("/", prodRoute)
 approuter.use("/", cartRoute)
