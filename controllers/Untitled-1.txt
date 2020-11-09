@@ -1,0 +1,9 @@
+Logic Checkout: 
+1. Cek Cart berdasarkan ID
+2. Stok produk - qty cart 
+3. cart dihapus berdasarkan id
+4. Insert ke Checkout berdasarkan :
+
+    - cart -> qty, harga_total, dll
+    - profile user -> alamat >> mau dikirim kemana
+    - hystory checkout -> tampil biasa
