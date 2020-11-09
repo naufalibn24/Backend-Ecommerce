@@ -8,6 +8,9 @@ const errorhandler = require('../Middleware/errorhandler')
 
 
 approuter.use("/", UserRoute, CatRoute, prodRoute, cartRoute)
+approuter.use("/", CatRoute)
+approuter.use("/", prodRoute)
+approuter.use("/", cartRoute)
 
 approuter.use(errorhandler)
 
