@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const monggoseurl = 'mongodb://localhost/Ecommerce'
+const monggoseurl = 'mongodb://naufal:assignment3@ds259154.mlab.com:59154/heroku_svt6tkmr'
 
 module.exports = () => {
     mongoose.connect(monggoseurl, {
