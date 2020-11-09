@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3000
 const mongooseconfig = require('./config/mongoose')
 const cors = require('cors')
 const approuter = require('./router/routes')
@@ -18,6 +17,7 @@ app.use(approuter)
 app.use.get("/", (req, res) => {
     res.send("HELLYEAAH")
 })
-app.listen(port, () => {
-    console.log(`listen on http://localhost:${port}`)
-})
+var server = app.listen(process.env.PORT || 5000, function () {
+    var port = server.address().port;
+    console.log("Express is working on port " + port);
+});
