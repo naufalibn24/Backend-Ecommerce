@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors())
 app.use(approuter)
 app.get('/', (req, res) => {
-    res.send('alhamdulillah sok mangga di ango we');
+    res.send('alhamdulillah wasukurillaah');
 })
 
 var server = app.listen(process.env.PORT || 8080, function () {
