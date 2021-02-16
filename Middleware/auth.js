@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken')
-const User = require('../model/User')
+const jwt = require("jsonwebtoken");
+const User = require("../model/User");
 
 // module.exports = (req, res, next) => {
 //     try {
@@ -10,14 +10,14 @@ const User = require('../model/User')
 //     }
 // }
 module.exports = (req, res, next) => {
-    const { token } = req.headers;
-    if (token) {
-        jwt.verify(token, 'APASIH', (err, decoded) => {
-            if (err) next({ name: 'auth failed' });
-            else {
-                req._id = decoded._id;
-                next();
-            }
-        });
-    } else next({ name: 'missing token' })
-}
+  const { token } = req.headers;
+  if (token) {
+    jwt.verify(token, "APASIH", (err, decoded) => {
+      if (err) next({ name: "auth failed" });
+      else {
+        req._id = decoded._id;
+        next();
+      }
+    });
+  } else next({ name: "missing token" });
+};
